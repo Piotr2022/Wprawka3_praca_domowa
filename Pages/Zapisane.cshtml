@@ -1,0 +1,16 @@
+﻿@page
+@model RokPrzestepnyApp.Pages.ZapisaneModel
+@{
+}
+<div class="text">
+    <h1 class="display-4">Lista</h1>
+    @if (@Model.lista != null)
+    {
+        @foreach (var data in @Model.lista)
+        {
+            <p>@data</p>
+        }
+    }
+    
+
+</div>

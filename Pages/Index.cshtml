@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Rok przestępny";
+}
+
+<div class="text">
+    <h1 class="display-4">Wypełnij formularz</h1>
+    <form method="post">
+        <label asp-for="uzytkownik.Rok" class="mb-3">Podaj rok urodzenia: </label>
+        <input asp-for="uzytkownik.Rok" class="form-control" />
+        <span asp-validation-for="uzytkownik.Rok" class=" text-danger"></span>
+        <br />
+        <label asp-for="uzytkownik.Imie" class="mb-3">Podaj imię: </label>
+        <input asp-for="uzytkownik.Imie" class="form-control" />
+        <span asp-validation-for="uzytkownik.Imie" class=" text-danger"></span>
+        <br />
+        <button class="btn btn-primary" type="submit">Wyślij</button>
+    </form>
+    <br />
+    <div class="alert alert-success" role="alert">
+        @Model.Message
+    </div>
+
+</div>
